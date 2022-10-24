@@ -19,11 +19,12 @@ from django.shortcuts import redirect
 
 
 def redirect_to_projects(request):
-    return redirect("list_projects")
+    return redirect("home")
 
 
 urlpatterns = [
     path("", redirect_to_projects, name="home"),
+    path("accounts/", include("accounts.urls")),
     path("projects/", include("projects.urls")),
     path("admin/", admin.site.urls),
 ]
