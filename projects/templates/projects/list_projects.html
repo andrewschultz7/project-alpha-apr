@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title_css %}
+<title>Project List</title>
+{% endblock title_css %}
+
+<main>
+    <div>
+        <h1>My Projects</h1>
+        {% if projectlist_object %}
+        <p>You are not assigned to any projects</p>
+        {% else %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Number of tasks</th>
+            </tr>
+            {% for line in projectlist_object %}
+            <tr>
+                <td>{{line.name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+</main>
