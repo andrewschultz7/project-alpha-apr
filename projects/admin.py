@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Project
+from tasks.models import Task
 
 # Register your models here.
 
@@ -10,3 +11,6 @@ class Project(admin.ModelAdmin):
         "name",
         "description",
     )
+
+
+admin.site.register(Task)
