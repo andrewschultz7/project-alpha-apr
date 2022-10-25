@@ -1,27 +1,37 @@
-{% extends './base.html' %}
+<!DOCTYPE html>
 {% load static %}
+<html lang="en">
 
-{% block title_css %}
-<title>Project List</title>
-{% endblock title_css %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
 
-<main>
-    <div>
-        <h1>My Projects</h1>
-        {% if projectlist_object %}
-        <p>You are not assigned to any projects</p>
-        {% else %}
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Number of tasks</th>
-            </tr>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>My Projects</h1>
             {% for line in projectlist_object %}
-            <tr>
-                <td>{{line.name}}</td>
-            </tr>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of tasks</th>
+                </tr>
+                <!-- # for line in projectlist_object -->
+                <tr>
+                    <td>{{line.name}}</td>
+                </tr>
+
+            </table>
+            {% empty %}
+            <p>You are not assigned to any projects</p>
             {% endfor %}
-        </table>
-        {% endif %}
-    </div>
-</main>
+        </div>
+    </main>
+</body>
+
+</html>
