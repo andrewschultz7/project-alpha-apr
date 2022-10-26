@@ -1,17 +1,17 @@
-{% extends './base.html' %}
+{% extends 'templates/base.html' %}
 {% load static %}
 {% block title_css %}
-<title>Login</title>
+<title>Create a new project</title>
 {% endblock title_css %}
 
 {% block main %}
 <main>
     <div>
-        <h1>Login</h1>
+        <h1>Create a new project</h1>
         <form method='post'>
             {% csrf_token %}
             {{form.as_p}}
-            <button>Login</button>
+            <button>Create</button>
         </form>
     </div>
 </main>
