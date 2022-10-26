@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+    background-color: rgb(13, 163, 163);
+    font-family: 'Kanit', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+header {
+    background-color: #76231d;
+}
+
+header:hover {
+    background-color: rgb(165, 165, 165);
+}
+
+#main-bar:link,
+#main:visited {
+    background-color: #76231d;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#main-bar:hover,
+#main:active {
+    background-color: rgb(165, 165, 165);
+}
+
+.recipes {
+    display: grid;
+    /* grid-template-columns: repeat(4, 0fr); */
+    grid-template-columns: 25% 25% 25% 25%;
+    /* column-gap: rem; */
+
+}
+
+
+.recipes2 {
+    box-sizing: content-box;
+    /* max-width: fit-content; */
+}
+
+.recipes2:hover {
+    transition: box-shadow 50ms;
+    box-shadow: 0px 2px 2px .2px rgb(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: bisque;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+img {
+    height: 240px;
+}
+
+
+nav {
+    font-size: 20px;
+    box-sizing: border-box;
+    border-bottom: solid 4px rgb(0, 0, 0);
+    padding: 14px;
+
+}
+
+tr:nth-child(even) {
+    background-color: bisque;
+}
+
+.other-link:link,
+a:visited {
+    display: flex;
+    background-color: #f44336;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.other-link:hover,
+a:active {
+    background-color: rgb(165, 165, 165);
+}

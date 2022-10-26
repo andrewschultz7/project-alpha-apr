@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from .models import Task
 from .forms import CreateTasksForm
 from django.contrib.auth.decorators import login_required
